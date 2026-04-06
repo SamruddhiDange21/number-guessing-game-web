@@ -5,6 +5,7 @@ This project is a simple web-based number guessing game built using HTML, CSS, a
 
 The game generates a random number between 1 and 100 and the player must guess the correct number. The program provides feedback if the guess is too high or too low and keeps track of the number of attempts.
 
+this is just the basic implementation 
 ## Technologies Used
 - HTML
 - CSS
