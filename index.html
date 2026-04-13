@@ -1,24 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Number Guessing Game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Number Guesser</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-    <h1>Number Guessing Game</h1>
-    <p>Guess a number between 1 and 100</p>
+    <div class="glass-panel main-game-card">
+        <h1>Number Guessing Game</h1>
+        <p class="subtitle">I'm thinking of a number between <strong>1</strong> and <strong>100</strong>.</p>
 
-    <input type="number" id="guessInput" placeholder="Enter your guess">
-    <button onclick="checkGuess()">Submit Guess</button>
-    <button onclick="resetGame()">Play Again</button>
+        <div class="input-area">
+            <input type="number" id="guessInput" placeholder="Enter your guess..." min="1" max="100">
+            <button id="submitBtn" onclick="checkGuess()">Guess!</button>
+        </div>
+        
+        <button id="resetBtn" class="hidden" onclick="resetGame()">Play Again</button>
 
-    <p id="message"></p>
-    <p id="attempts"></p>
-</div>
+        <p id="message" class="message"></p>
+        
+        <div class="stats">
+            <span id="attemptsText">Attempts: 0</span>
+        </div>
 
-<script src="script.js"></script>
+        <div class="history-container">
+            <h3>Guess History</h3>
+            <ul id="guessHistory">
+                <!-- History list will be populated here -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
